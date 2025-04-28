@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Streamlit app
-st.title("Upload Offered Pool Data (DA Business)")
+st.title("Upload Offered Pool Summary (DA Business)")
 
 # File uploader
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
@@ -25,8 +25,8 @@ if uploaded_file is not None:
         "Min POS (₹)": df['POS'].min(),
         "Max POS (₹)": df['POS'].max(),
         # "Average POS (₹)": df['POS'].sum()/df['LANID'].count(),
-        "Min tenure (₹)": df['tenure'].min(),
-        "Max tenure (₹)": df['tenure'].max(),
+        "Min tenure": df['tenure'].min(),
+        "Max tenure": df['tenure'].max(),
         # "Average tenure (₹)": df['tenure'].mean(),
         # "Average Ticket Size (₹)": df['Average_Ticket_Size'].mean(),
     }
